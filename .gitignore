@@ -1,0 +1,32 @@
+# Obsidian Internal Folders
+# -------------------------
+# This contains your workspace layout, open tabs, and search history.
+# Most people exclude this to avoid "merge conflicts" on UI settings.
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian\themes
+
+# If you use the "Recent Files" or "Graph View" and don't want 
+# your specific view state tracked, uncomment the following:
+# .obsidian/graph.json
+# .obsidian/appearance.json
+
+# Plugin Cache/Data
+# -------------------------
+# Some plugins store large local caches or sensitive data.
+.obsidian/plugins/*/data.json
+.obsidian/plugins/
+
+# Note: You generally SHOULD track 'manifest.json' so Git knows which plugins are installed.
+
+# OS-Specific Garbage
+# -------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+.pdf
+
+# Sync & Backup leftovers
+# -------------------------
+*.sync-conflict-*
+.trash/
