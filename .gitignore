@@ -10,6 +10,7 @@
 # your specific view state tracked, uncomment the following:
 # .obsidian/graph.json
 # .obsidian/appearance.json
+.z_Test_Folder/*.md
 
 # Plugin Cache/Data
 # -------------------------
@@ -30,3 +31,5 @@ desktop.ini
 # -------------------------
 *.sync-conflict-*
 .trash/
+/z_Test_Folder
+/.obsidian
