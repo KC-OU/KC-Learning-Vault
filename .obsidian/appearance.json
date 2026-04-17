@@ -3,5 +3,6 @@
   "showRibbon": true,
   "baseFontSize": 14,
   "baseFontSizeAction": true,
-  "cssTheme": "ITS Theme"
+  "cssTheme": "ITS Theme",
+  "nativeMenus": false
 }

@@ -1,5 +1,60 @@
 ## Empowering the Digital Future: A Comprehensive Introduction to KC - Learning Vault
 
+> [!infobox|left wikipedia]+
+> # IT Learning Certs
+> ![[IT Learning.png|cover hsmall]]
+> ###### Beginner Certs
+> ---
+> ## **Cisco - Entry-level - CCST**
+> | Name | ECODE | HOE | Cost |
+> | ------ | -------- |--------------------|------ |
+> | IT Support | 100-140 | 1 | £92 |
+> | Networking | 100-150 | 1 | £92 |
+> | Cyber  Sec  | 100-160 | 1 | £92|
+> ---
+> ## **CompTIA - Entry-level**
+> | Name | Exam Code | HOE | Cost |
+> | ------ | :------: |:------------------:|------ |
+> | A+ | 220-1201/2  | 2 | £188 |
+> | Linux+ | XK0-006 | 1 | £146 |
+> | Network+  | N10-009 | 1 | £146
+> |  Security+ | SY0-701 | 1 | £213 |
+> ---
+> ## **Other Certs**
+> | Name | HOE | Cost |
+> | ------ |:------------------:|------ |
+> | THM - SEC0| 1 | £50 |
+> | THM - SEC1| 1 | £110 |
+> | THM - PT1 | 1 | £229 |
+> | HTB - CJCA| 1 | £75 |
+
+> [!infobox| wikipedia]+
+> # IT Learning Certs
+> ![[IT Learning.png|cover hsmall]]
+> ###### Advanced  Certs
+> ---
+> ## **Cisco - Associate, Professional and Expert**
+> | Name | ECODE | HOE | Cost |
+> | ------ | -------- |--------------------|------ |
+> | CCNA | 200-301  | 1 | £222 |
+> | CCNA Cyber | 200-201 | 1 | £222 |
+> |E Hacking | N/A | 1| FREE | 
+> ---
+> ## **CompTIA**
+> | Name | Exam Code | HOE | Cost |
+> | ------ | :------: |:------------------:|------|
+> | Pentest+ |  PT0-003 | 1 | £213 |
+> | CySA+|  CS0-003 | 1| £213 | 
+>---
+> ## **Other Certs**
+> | Name | HOE | Cost |
+> | ------ | :------------------:|------ |
+> | CEH | 1 | £883 |
+> | OSCP - PEN-200| 1| £1,288 |
+> | HTB CPTS  | 1 | £150 |
+> | HTB CAPE  | 1 | £250 |
+> | HTB CWPE  | 1 | £250 |
+
 In an era where technology evolves at the speed of thought, the demand for highly skilled IT professionals has never been more critical. As businesses undergo rapid digital transformations, the "skills gap" has become a formidable hurdle for both employers and job seekers. KC - Learning Vault emerges as a sophisticated, tech-powered ecosystem designed to bridge this divide. By integrating world-class educational content with cutting-edge digital credentialing and AI-driven talent matching, KC - Learning Vault redefines how individuals master IT disciplines, ranging from foundational hardware support to complex network automation.
 
 The name "Learning Vault" is a deliberate choice, representing a secure, high-value repository where knowledge isn't just consumed—it is stored, verified, and utilized as professional currency. Unlike traditional training platforms that often leave learners with a static PDF certificate and no clear path to employment, KC - Learning Vault operates on the philosophy that education must be a direct investment in one's career equity. This is achieved through a three-pillar system: the Education Vault, which houses a massive library of vendor-neutral and vendor-specific training; the Credential Vault, which utilizes blockchain technology to issue verifiable digital badges; and the Talent Vault, which uses artificial intelligence to match verified skills directly with global job opportunities.
@@ -32,3 +87,12 @@ The ultimate goal of KC - Learning Vault is to ensure that every learner is "job
 Furthermore, the platform acknowledges that learning in IT is a lifelong pursuit. The "Skills Wallet" feature allows professionals to carry their achievements with them throughout their careers. As the industry evolves, learners can return to the Vault to upskill in emerging technologies like Blockchain or Quantum Computing, ensuring their professional profile remains relevant in an ever-changing economy. This longitudinal approach to education transforms the Vault from a mere training provider into a lifelong career partner.
 
 In conclusion, KC - Learning Vault is more than just a collection of courses; it is a comprehensive career engine built for the digital age. By combining the foundational rigor of CompTIA, the technical depth of Cisco, and the emerging technologies of the Cloud and AI, it provides a clear and structured roadmap for anyone looking to excel in information technology. Whether you are an individual looking to break into the industry for the first time or a seasoned professional aiming to specialize in a high-demand field, the Vault provides the tools, the credentials, and the connections necessary to secure your place in the future of work. Through verified mastery and proactive talent matching, KC - Learning Vault ensures that the next generation of IT leaders is prepared for any challenge the digital world may present.
+
+<!--
+Need to make a key to help myself
+ | Acronym | Long Answer    |
+ | ------- | -------------- |
+ | HOE     | How many exams |
+ | C       | Cyber          |
+ | E       | Ethical        | 
+--> 

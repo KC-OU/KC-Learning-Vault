@@ -1,42 +1,27 @@
 {
   "main": {
-    "id": "d1c6dfcb451f008c",
+    "id": "5324373015726ba8",
     "type": "split",
     "children": [
       {
-        "id": "4c0f23daefda6964",
+        "id": "babfe097f7a77dda",
         "type": "tabs",
         "children": [
           {
-            "id": "90f1386d4166cdb5",
+            "id": "5ffb509d5f92c239",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "Main Vault Menu.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Main Vault Menu"
-            }
-          },
-          {
-            "id": "028b5ca5833fb25d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Main Vault Menu.md",
-                "mode": "source",
-                "source": false
+                "mode": "preview",
+                "source": true
               },
               "icon": "lucide-file",
               "title": "Main Vault Menu"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -186,6 +171,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "homepage:Open homepage": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -197,10 +183,11 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "d0ae0591f9fda313",
+  "active": "5ffb509d5f92c239",
   "lastOpenFiles": [
-    "z_Assets/Images/IT Learning.png",
     "Main Vault Menu.md",
+    "Main Vault Menu.md",
+    "z_Assets/Images/IT Learning.png",
     "z_Assets/Images",
     "z_Assets",
     "Untitled.md",
