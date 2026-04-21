@@ -11,6 +11,8 @@
 > | IT Support | 100-140 | 1 | £92 |
 > | Networking | 100-150 | 1 | £92 |
 > | Cyber  Sec  | 100-160 | 1 | £92|
+> | Splunk Core  | N/A | 1 | £96|
+> | Splunk PUser | N/A | 1 | £96|
 > ---
 > ## **CompTIA - Entry-level**
 > | Name | Exam Code | HOE | Cost |
@@ -90,9 +92,20 @@ In conclusion, KC - Learning Vault is more than just a collection of courses; it
 
 <!--
 Need to make a key to help myself
- | Acronym | Long Answer    |
- | ------- | -------------- |
- | HOE     | How many exams |
- | C       | Cyber          |
- | E       | Ethical        | 
---> 
+ | Acronym | Long Answer                                      |
+ | ------- | ------------------------------------------------ |
+ | HOE     | How many exams                                   |
+ | C       | Cyber                                            |
+ | E       | Ethical                                          |
+ | PUser   | Power User                                       |
+ | OSCP    | Offensive Security Certified Professional        |
+ | HTB     | Hack The Box                                     |
+ | THM     | TryHackME                                        |
+ | CPTS    | HTB Certified Penetration Testing Specialist     |
+ | CAPE    | HTB Certified Active Directory Pentesting Expert |
+ | CWPE    | HTB Certified Wi-Fi Pentesting Expert            |
+ | SEC     | Cyber Security 101                               |
+ | PT1     | Jr Penetration Tester                            |
+ | CJCA    | HTB Certified Junior Cybersecurity Associate     |
+ | SEC0    | Pre Security Cert                                | 
+-->

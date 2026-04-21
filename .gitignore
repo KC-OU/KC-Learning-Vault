@@ -16,7 +16,8 @@
 # -------------------------
 # Some plugins store large local caches or sensitive data.
 .obsidian/plugins/*/data.json
-.obsidian/plugins/
+.obsidia/plugins/
+.obsidian/icons
 
 # Note: You generally SHOULD track 'manifest.json' so Git knows which plugins are installed.
 
