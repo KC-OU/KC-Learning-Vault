@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Main Vault Menu.md",
+                "file": "Beginner Certs/Cisco/Splunk Core/Splunk Core.md",
                 "mode": "preview",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
-              "title": "Main Vault Menu"
+              "title": "Splunk Core"
             }
           }
         ]
@@ -186,6 +186,8 @@
   "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
     "Main Vault Menu.md",
+    "Beginner Certs/Cisco/Splunk Core/Splunk Core.md",
+    "Beginner Certs/Cisco/Splunk Core",
     "Beginner Certs/Cisco",
     "Untitled.md",
     "Excalidraw/Drawing 2026-04-21 23.29.18.excalidraw.md",

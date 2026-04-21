@@ -6,5 +6,6 @@
   "showIndentGuide": false,
   "rightToLeft": false,
   "foldIndent": false,
-  "vimMode": false
+  "vimMode": false,
+  "alwaysUpdateLinks": true
 }
