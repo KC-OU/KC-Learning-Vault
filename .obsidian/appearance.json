@@ -4,5 +4,7 @@
   "baseFontSize": 14,
   "baseFontSizeAction": true,
   "cssTheme": "ITS Theme",
-  "nativeMenus": false
+  "nativeMenus": false,
+  "textFontFamily": "Exo 2",
+  "interfaceFontFamily": "Exo 2"
 }

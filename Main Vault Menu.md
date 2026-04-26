@@ -27,8 +27,8 @@
 > | ------ |:------------------:|------ |
 > | THM - SEC0| 1 | £50 |
 > | THM - SEC1| 1 | £110 |
-> | THM - PT1 | 1 | £229 |
-> | HTB - CJCA| 1 | £75 |
+> |[[THM-PT1]]| 1 | £229 |
+> | [[HTB-CJCA]]| 1 | £75 |
 
 > [!infobox| wikipedia]+
 > # IT Learning Certs

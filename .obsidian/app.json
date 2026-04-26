@@ -7,5 +7,7 @@
   "rightToLeft": false,
   "foldIndent": false,
   "vimMode": false,
-  "alwaysUpdateLinks": true
+  "alwaysUpdateLinks": true,
+  "defaultViewMode": "preview",
+  "livePreview": false
 }
