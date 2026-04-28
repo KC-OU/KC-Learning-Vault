@@ -6,5 +6,6 @@
   "cssTheme": "ITS Theme",
   "nativeMenus": false,
   "textFontFamily": "Exo 2",
-  "interfaceFontFamily": "Exo 2"
+  "interfaceFontFamily": "Exo 2",
+  "enabledCssSnippets": []
 }

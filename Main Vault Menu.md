@@ -57,6 +57,8 @@
 > | HTB CAPE  | 1 | £250 |
 > | HTB CWPE  | 1 | £250 |
 
+
+
 In an era where technology evolves at the speed of thought, the demand for highly skilled IT professionals has never been more critical. As businesses undergo rapid digital transformations, the "skills gap" has become a formidable hurdle for both employers and job seekers. KC - Learning Vault emerges as a sophisticated, tech-powered ecosystem designed to bridge this divide. By integrating world-class educational content with cutting-edge digital credentialing and AI-driven talent matching, KC - Learning Vault redefines how individuals master IT disciplines, ranging from foundational hardware support to complex network automation.
 
 The name "Learning Vault" is a deliberate choice, representing a secure, high-value repository where knowledge isn't just consumed—it is stored, verified, and utilized as professional currency. Unlike traditional training platforms that often leave learners with a static PDF certificate and no clear path to employment, KC - Learning Vault operates on the philosophy that education must be a direct investment in one's career equity. This is achieved through a three-pillar system: the Education Vault, which houses a massive library of vendor-neutral and vendor-specific training; the Credential Vault, which utilizes blockchain technology to issue verifiable digital badges; and the Talent Vault, which uses artificial intelligence to match verified skills directly with global job opportunities.

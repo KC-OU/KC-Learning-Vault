@@ -7,9 +7,18 @@
 > # **Start your learning here**
 > | Name | Difficulty | Path or Room |
 > | ------ | -------- |----------------|
-> |  Pre Security | Easy | Path |
->  
->
+> |  [Pre Security](###Pre-Security) | Easy | Path |
+> | Cyber Security 101 | Easy | Path |
+> | Jr Penetration Tester | Intermediate | Path |
+> | Web	Fundamentals | Easy | Path |
+> | Windows Privilege Escalastion | Medium | Room |
+> | Linux Privilege Escalastion | Medium | Room |
+> | Lateral Movement and Pivoting | Easy | Room |
+> |Credentials Harvesting | Medium| Room |
+> |Exploit Vulnerabilites | Easy | Room |
+> |Writting Pentest Reports | Easy | Room |
+> | AD: Basic Enumeration | Easy | Room |
+> |  AD: Authenticated Enumeration | Medium | Room |
 >---
 >## **Practice - Practice your skills**
 > | Name | Difficulty | Path or Room |
@@ -35,5 +44,7 @@ The curriculum is divided into several expertly crafted modules, covering critic
 What sets this pathway apart is TryHackMe’s interactive, browser-based learning environment. Instead of passively reading theory, you actively deploy virtual machines and practice exploits in a safe, legal, and gamified setting.
 
 Ultimately, the Junior Penetration Tester pathway is the perfect launchpad. It prepares you for entry-level offensive security roles, builds a rock-solid foundation for practical industry certifications (such as the CompTIA PenTest+ or eJPT), and provides a clear, guided roadmap to launching a successful career as an ethical hacker.
+
+### Pre-Security
 
 
