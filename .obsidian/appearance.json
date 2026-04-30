@@ -1,11 +1,22 @@
 {
   "showViewHeader": true,
   "showRibbon": true,
-  "baseFontSize": 14,
+  "baseFontSize": 17,
   "baseFontSizeAction": true,
   "cssTheme": "ITS Theme",
   "nativeMenus": false,
   "textFontFamily": "Exo 2",
   "interfaceFontFamily": "Exo 2",
-  "enabledCssSnippets": []
+  "enabledCssSnippets": [
+    "S - Callouts",
+    "S - Checkboxes",
+    "S - Dataview Cards",
+    "S - Embed Adjustments",
+    "S - Encoded Fonts",
+    "S - Encoded Icons",
+    "S - External Link Icons",
+    "S - Folder Styles Rewritten",
+    "S - Images Adjustments",
+    "S - Alt Color Scheme Template"
+  ]
 }

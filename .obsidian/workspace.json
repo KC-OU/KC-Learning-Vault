@@ -6,7 +6,6 @@
       {
         "id": "4509724f8bf84da7",
         "type": "tabs",
-        "dimension": 32.5,
         "children": [
           {
             "id": "e7a7b303c61786dc",
@@ -14,28 +13,21 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Beginner Certs/Other/TryHackMe/THM-PT1.md",
+                "file": "Beginner Certs/Other/TryHackMe/THM-PT1/THM-PT1.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
               "title": "THM-PT1"
             }
-          }
-        ]
-      },
-      {
-        "id": "c6ea89377aa1147b",
-        "type": "tabs",
-        "dimension": 67.5,
-        "children": [
+          },
           {
-            "id": "8c62c5796f1e1ef6",
+            "id": "f0f12ae2299c67ab",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Beginner Certs/Other/TryHackMe/THM-PT1.md",
+                "file": "Beginner Certs/Other/TryHackMe/THM-PT1/THM-PT1.md",
                 "mode": "preview",
                 "source": true
               },
@@ -43,7 +35,8 @@
               "title": "THM-PT1"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -100,7 +93,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "e474aa1d6392facd",
@@ -205,49 +199,14 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "floating": {
-    "id": "03fad17805fa6633",
-    "type": "floating",
-    "children": [
-      {
-        "id": "0d0953590baeb245",
-        "type": "window",
-        "children": [
-          {
-            "id": "60255803da8eabb5",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "1285f350f2468685",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "Beginner Certs/Other/TryHackMe/THM-PT1.md",
-                    "mode": "preview",
-                    "source": true
-                  },
-                  "icon": "lucide-file",
-                  "title": "THM-PT1"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 847,
-        "y": 123,
-        "width": 1024,
-        "height": 800,
-        "maximize": true,
-        "zoom": 0
-      }
-    ]
-  },
-  "active": "1285f350f2468685",
+  "active": "f0f12ae2299c67ab",
   "lastOpenFiles": [
-    "Beginner Certs/Other/TryHackMe/THM-PT1.md",
     "Main Vault Menu.md",
+    "Beginner Certs/Other/TryHackMe/THM-PT1/THM-PT1.md",
+    "z_Assets/Images/other/sec0-card.e59fca49.png",
+    "Beginner Certs/Cisco/Splunk Core/Splunk Core.md",
+    "Beginner Certs/Other/TryHackMe/THM-PT1/Practice Rooms",
+    "Beginner Certs/Other/TryHackMe/THM-PT1",
     "Untitled.base",
     "z_Assets/Images/other/thm-pt1.png",
     "z_Assets/Images/other/Screenshot 2026-04-26 215441.png",
@@ -259,13 +218,10 @@
     "Beginner Certs/Other/HacktheBox/HTB-CJCA.md",
     "Beginner Certs/Other/HacktheBox",
     "Beginner Certs/Other",
-    "Beginner Certs/Cisco/Splunk Core/Splunk Core.md",
     "Beginner Certs/Cisco/Splunk Core",
     "Beginner Certs/Cisco",
     "Untitled.md",
     "Excalidraw/Drawing 2026-04-21 23.29.18.excalidraw.md",
-    "Excalidraw",
-    "Advanced Certs",
     "Welcome.md"
   ]
 }
