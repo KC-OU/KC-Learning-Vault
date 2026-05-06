@@ -20,20 +20,6 @@
               "icon": "lucide-file",
               "title": "Nmap - TryhackMe - Walkthrough"
             }
-          },
-          {
-            "id": "66067d9f8cd32a04",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Practical Rooms/TryHackMe/Nmap - TryhackMe - Walkthrough.md",
-                "mode": "preview",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Nmap - TryhackMe - Walkthrough"
-            }
           }
         ]
       }
@@ -197,47 +183,11 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "floating": {
-    "id": "f0f1b9884c5a12fc",
-    "type": "floating",
-    "children": [
-      {
-        "id": "1c75a7a678c3490a",
-        "type": "window",
-        "children": [
-          {
-            "id": "f4c4b16be2c6ddda",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "28328ea93266096f",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "Practical Rooms/TryHackMe/Nmap - TryhackMe - Walkthrough.md",
-                    "mode": "preview",
-                    "source": true
-                  },
-                  "icon": "lucide-file",
-                  "title": "Nmap - TryhackMe - Walkthrough"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 958,
-        "y": 23,
-        "width": 960,
-        "height": 563,
-        "maximize": false,
-        "zoom": 0
-      }
-    ]
-  },
   "active": "52efb6128ecd0832",
   "lastOpenFiles": [
+    "z_Assets/Images/practical/thm/nmap/vUQL9SK.png",
+    "z_Assets/Images/practical/thm/nmap/ngzBWID.png",
+    "z_Assets/Images/practical/thm/nmap/image-2.png",
     "Beginner Certs/Other/TryHackMe/THM-PT1/THM-PT1.md",
     "Practical Rooms/TryHackMe/Nmap - TryhackMe - Walkthrough.md",
     "z_Assets/Images/practical/thm/nmap/3XAfRpI.png",
@@ -265,9 +215,7 @@
     "Beginner Certs/Other/TryHackMe/THM-PT1/Practice Rooms",
     "Beginner Certs/Other/TryHackMe/THM-PT1",
     "z_Assets/Images/other/thm-pt1.png",
-    "z_Assets/Images/other/Screenshot 2026-04-26 215441.png",
     "z_Assets/Images/Untitled.md",
-    "z_Assets/Images/main/IT Learning.png",
     "Beginner Certs/Other/HacktheBox/HTB-CJCA.md",
     "Excalidraw/Drawing 2026-04-21 23.29.18.excalidraw.md",
     "Welcome.md"

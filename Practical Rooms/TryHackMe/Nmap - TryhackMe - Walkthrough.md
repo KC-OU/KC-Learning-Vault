@@ -4,18 +4,20 @@
 > # Nmap Room
 > ![[nmap.png|cover hsmall]]
 > ### Tasks
-| Task Number and Task Name | How many questions in this task? |   
-| ------------------------- | -------------------------------- | 
-| 1  - Deploy               | Skipping                         |    
-| 2 - Introduction          | 3                                |    
-| 3 - Nmap Switches         | 16                               |     
+| Task Number and Task Name                                     | How many questions in this task? |
+| ------------------------------------------------------------- | -------------------------------- |
+| 1  - Deploy                                                   | Skipping                         |
+| 2 - Introduction                                              | 3                                |
+| 3 - Nmap Switches                                             | 16                               |
+| 4 - <font color="cyan">Scan Type</font> - Overview | Not Required                               |
+|  5 - <font color="cyan">Scan Type</font> - TCP Connect Scans                                                            |           2                       |
 ## Summary
 
 An in depth look at scanning with Nmap, a powerful network scanning tool.
 
 ### Task 1 - Deploy - Skipping
 
-> [!warning] 
+> [!warning]+
 > I am skipping this task as it is not required for this module.
 
 ### Task 2 - Introduction
@@ -98,3 +100,59 @@ All you'll need for this is the help menu for nmap (accessed with `nmap -h`) 
 
 >[!question]- How would you activate all of the scripts in the "vuln" category?
 > `--script=vuln`
+
+### Task  4 - <font color="cyan">Scan Type</font> - Overview
+When port scanning with Nmap, there are three basic scan types. These are:
+
+- TCP Connect Scans (`-sT`)
+- SYN "Half-open" Scans (`-sS`)
+- UDP Scans (`-sU`)
+
+Additionally there are several less common port scan types, some of which we will also cover (albeit in less detail). These are:
+
+- TCP Null Scans (`-sN`)
+- TCP FIN Scans (`-sF`)
+- TCP Xmas Scans (`-sX`)
+
+Most of these (with the exception of UDP scans) are used for very similar purposes, however, the way that they work differs between each scan. This means that, whilst one of the first three scans are likely to be your go-to in most situations, it's worth bearing in mind that other scan types exist.
+
+In terms of network scanning, we will also look briefly at ICMP (or "ping") scanning.
+> [!info]+ 
+> This section does not have any questions as this is just a information section :)
+
+### Task  4 - <font color="cyan">Scan Type</font> - TCP Connect Scans
+To understand TCP Connect scans (`-sT`), it's important that you're comfortable with the _TCP three-way handshake_. If this term is new to you then completing [Introductory Networking](https://tryhackme.com/room/introtonetworking) before continuing would be advisable.
+
+As a brief recap, the three-way handshake consists of three stages. First the connecting terminal (our attacking machine, in this instance) sends a TCP request to the target server with the SYN flag set. The server then acknowledges this packet with a TCP response containing the SYN flag, as well as the ACK flag. Finally, our terminal completes the handshake by sending a TCP request with the ACK flag set. ![[image-2.png|right|200]]
+This is one of the fundamental principles of TCP/IP networking, but how does it relate to Nmap?
+
+Well, as the name suggests, a TCP Connect scan works by performing the three-way handshake with each target port in turn. In other words, Nmap tries to connect to each specified TCP port, and determines whether the service is open by the response it receives.
+
+---
+>"... If the connection does not exist (CLOSED), then a reset is sent in response to any incoming segment except another reset. A SYN segment that does not match an existing connection is rejected by this means."
+\- if a port is closed, [RFC 9293](https://datatracker.ietf.org/doc/html/rfc9293) states that 
+
+![[vUQL9SK.png |left| 200]] If, however, the request is sent to an _open_ port, the target will respond with a TCP packet with the SYN/ACK flags set. Nmap then marks this port as being _open_ (and completes the handshake by sending back a TCP packet with ACK set).
+
+---
+This is all well and good, however, there is a third possibility.
+
+What if the port is open, but hidden behind a firewall?
+
+Many firewalls are configured to simply **drop** incoming packets. Nmap sends a TCP SYN request, and receives nothing back. This indicates that the port is being protected by a firewall and thus the port is considered to be _filtered_.
+
+That said, it is very easy to configure a firewall to respond with a RST TCP packet. For example, in IPtables for Linux, a simple version of the command would be as follows:
+
+`iptables -I INPUT -p tcp --dport <port> -j REJECT --reject-with tcp-reset`
+
+This can make it extremely difficult (if not impossible) to get an accurate reading of the target(s).
+
+#### Questions
+> [!question]- Which RFC defines the appropriate behaviour for the TCP protocol?
+> 	`RFC 9293`
+
+> [!question]- If a port is closed, which flag should the server send back to indicate this?
+> `RST`
+
+
+
