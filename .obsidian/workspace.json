@@ -4,39 +4,38 @@
     "type": "split",
     "children": [
       {
-        "id": "4509724f8bf84da7",
+        "id": "88804d1241e0d2ee",
         "type": "tabs",
         "children": [
           {
-            "id": "e7a7b303c61786dc",
+            "id": "52efb6128ecd0832",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Beginner Certs/Other/TryHackMe/THM-PT1/THM-PT1.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "THM-PT1"
-            }
-          },
-          {
-            "id": "f0f12ae2299c67ab",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Beginner Certs/Other/TryHackMe/THM-PT1/THM-PT1.md",
+                "file": "Practical Rooms/TryHackMe/Nmap - TryhackMe - Walkthrough.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "THM-PT1"
+              "title": "Nmap - TryhackMe - Walkthrough"
+            }
+          },
+          {
+            "id": "66067d9f8cd32a04",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Practical Rooms/TryHackMe/Nmap - TryhackMe - Walkthrough.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Nmap - TryhackMe - Walkthrough"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -69,7 +68,7 @@
               "type": "search",
               "state": {
                 "query": "",
-                "matchingCase": false,
+                "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -93,8 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "e474aa1d6392facd",
@@ -199,28 +197,78 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "f0f12ae2299c67ab",
+  "floating": {
+    "id": "f0f1b9884c5a12fc",
+    "type": "floating",
+    "children": [
+      {
+        "id": "1c75a7a678c3490a",
+        "type": "window",
+        "children": [
+          {
+            "id": "f4c4b16be2c6ddda",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "28328ea93266096f",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Practical Rooms/TryHackMe/Nmap - TryhackMe - Walkthrough.md",
+                    "mode": "preview",
+                    "source": true
+                  },
+                  "icon": "lucide-file",
+                  "title": "Nmap - TryhackMe - Walkthrough"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 958,
+        "y": 23,
+        "width": 960,
+        "height": 563,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "52efb6128ecd0832",
   "lastOpenFiles": [
-    "Main Vault Menu.md",
     "Beginner Certs/Other/TryHackMe/THM-PT1/THM-PT1.md",
+    "Practical Rooms/TryHackMe/Nmap - TryhackMe - Walkthrough.md",
+    "z_Assets/Images/practical/thm/nmap/3XAfRpI.png",
+    "z_Assets/Images/practical/thm/nmap",
+    "z_Assets/Images/practical/thm",
+    "z_Assets/Images/practical/Untitled.md",
+    "z_Assets/Images/practical",
+    "Main Vault Menu.md",
+    "Pasted image 20260506112626.png",
+    "Pasted image 20260506112616.png",
+    "Practical Rooms/Practical Rooms.md",
+    "z_Assets/Images/other/nmap.png",
+    "Practical Rooms/TryHackMe/Wreath - TryhackMe - Network.md",
+    "z_Assets/Images/other/wreath-image.png",
+    "z_Templates/TryhackME - Network Template.md",
+    "z_Assets/Untitled.md",
+    "z_Templates",
+    "Practical Rooms/Other",
+    "Practical Rooms/HacktheBox",
+    "Practical Rooms/TryHackMe",
+    "Practical Rooms",
+    "z_Assets/Images/other/pt1-pre-s-os-task2.png",
     "z_Assets/Images/other/sec0-card.e59fca49.png",
     "Beginner Certs/Cisco/Splunk Core/Splunk Core.md",
     "Beginner Certs/Other/TryHackMe/THM-PT1/Practice Rooms",
     "Beginner Certs/Other/TryHackMe/THM-PT1",
-    "Untitled.base",
     "z_Assets/Images/other/thm-pt1.png",
     "z_Assets/Images/other/Screenshot 2026-04-26 215441.png",
     "z_Assets/Images/Untitled.md",
-    "z_Assets/Images/other",
     "z_Assets/Images/main/IT Learning.png",
-    "z_Assets/Images/main",
-    "Beginner Certs/Other/TryHackMe",
     "Beginner Certs/Other/HacktheBox/HTB-CJCA.md",
-    "Beginner Certs/Other/HacktheBox",
-    "Beginner Certs/Other",
-    "Beginner Certs/Cisco/Splunk Core",
-    "Beginner Certs/Cisco",
-    "Untitled.md",
     "Excalidraw/Drawing 2026-04-21 23.29.18.excalidraw.md",
     "Welcome.md"
   ]
