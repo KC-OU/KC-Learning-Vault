@@ -3,16 +3,27 @@
 > [!infobox|wikipedia]+
 > # Nmap Room
 > ![[nmap.png|cover hsmall]]
+> ### Completed <input type="checkbox" checked/>
+> ---
 > ### Tasks
-| Task Number and Task Name                                     | How many questions in this task? |
-| ------------------------------------------------------------- | -------------------------------- |
-| 1  - Deploy                                                   | Skipping                         |
-| 2 - Introduction                                              | 3                                |
-| 3 - Nmap Switches                                             | 16                               |
-| 4 - <font color="cyan">Scan Type</font> - Overview | Not Required                               |
-|  5 - <font color="cyan">Scan Type</font> - TCP Connect Scans                                                            |           2                       |
+| Task Number and Task Name| How many questions in this task?   |
+| ------------------------------------------ | ------------------------------------------------   |
+| 1  - Deploy                                  | Skipping                                               |
+| 2 - Introduction                         | 3                                                             | 
+| 3 - Nmap Switches                    | 16                                                          | 
+| 4 - <font color="cyan">Scan Type</font> - Overview | Not Required  |
+|  5 - <font color="cyan">Scan Type</font> - TCP Connect Scans| 2      |
+|  6 - <font color="cyan">Scan Type</font> - SYN Scans| 2      |
+|  7 - <font color="cyan">Scan Type</font> - UPD Scans| 2      |
+|  8 - <font color="cyan">Scan Type</font> - NULL, FIN and Xmas| 3     |
+|  9 - <font color="cyan">Scan Type</font> - ICMP Network Scanning| 1    |
+|  10 - <font color="cyan">NSE Scripts</font> - Overview | 2      |
+|  11 -  <font color="cyan">NSE Scripts</font> - Working with the NSE| 1      |
+|  12 - <font color="cyan">NSE Scripts</font> - Searching for Scripts| 2      |
+|  13 - Firewall Invasion| 2      |	
+|  14 - <font color="a3ea2a">Practical</font> | 5     |	
+|  15  - Conclusion | Not Required   |	
 ## Summary
-
 An in depth look at scanning with Nmap, a powerful network scanning tool.
 
 ### Task 1 - Deploy - Skipping
@@ -44,7 +55,7 @@ For now, it is important that you understand: what port scanning is; why it is n
 > [!question]- **Research** How many of these are considered "well-known"? (These are the "standard" numbers mentioned in the task
 > `1024`
 
-### Task  3  - Nmap Switches
+### Task 3   - Nmap Switches
 Like most pentesting tools, nmap is run from the terminal. There are versions available for both Windows and Linux. For this room we will assume that you are using Linux; however, the switches should be identical. Nmap is installed by default in both Kali Linux and the [TryHackMe Attack Box.](https://tryhackme.com/my-machine)
 
 Nmap can be accessed by typing `nmap` into the terminal command line, followed by some of the "switches" (command arguments which tell a program to do different things) we will be covering below.
@@ -101,7 +112,8 @@ All you'll need for this is the help menu for nmap (accessed with `nmap -h`) 
 >[!question]- How would you activate all of the scripts in the "vuln" category?
 > `--script=vuln`
 
-### Task  4 - <font color="cyan">Scan Type</font> - Overview
+### Task 4 - <font color="cyan">Scan Type</font> - Overview
+
 When port scanning with Nmap, there are three basic scan types. These are:
 
 - TCP Connect Scans (`-sT`)
@@ -120,13 +132,18 @@ In terms of network scanning, we will also look briefly at ICMP (or "ping") scan
 > [!info]+ 
 > This section does not have any questions as this is just a information section :)
 
-### Task  4 - <font color="cyan">Scan Type</font> - TCP Connect Scans
+### Task 5 - <font color="cyan">Scan Type</font> - TCP Connect Scans
 To understand TCP Connect scans (`-sT`), it's important that you're comfortable with the _TCP three-way handshake_. If this term is new to you then completing [Introductory Networking](https://tryhackme.com/room/introtonetworking) before continuing would be advisable.
 
 As a brief recap, the three-way handshake consists of three stages. First the connecting terminal (our attacking machine, in this instance) sends a TCP request to the target server with the SYN flag set. The server then acknowledges this packet with a TCP response containing the SYN flag, as well as the ACK flag. Finally, our terminal completes the handshake by sending a TCP request with the ACK flag set. ![[image-2.png|right|200]]
 This is one of the fundamental principles of TCP/IP networking, but how does it relate to Nmap?
 
 Well, as the name suggests, a TCP Connect scan works by performing the three-way handshake with each target port in turn. In other words, Nmap tries to connect to each specified TCP port, and determines whether the service is open by the response it receives.
+
+---
+
+![](https://assets.tryhackme.com/additional/imgur/ngzBWID.png) 
+
 
 ---
 >"... If the connection does not exist (CLOSED), then a reset is sent in response to any incoming segment except another reset. A SYN segment that does not match an existing connection is rejected by this means."
@@ -153,6 +170,275 @@ This can make it extremely difficult (if not impossible) to get an accurate read
 
 > [!question]- If a port is closed, which flag should the server send back to indicate this?
 > `RST`
+### Task 6  - <font color="cyan">Scan Type</font> - SYN Scans
+As with TCP scans, SYN scans (`-sS`) are used to scan the TCP port-range of a target or targets; however, the two scan types work slightly differently. SYN scans are sometimes referred to as "_Half-open"_ scans, or _"Stealth"_ scans.  
+
+Where TCP scans perform a full three-way handshake with the target, SYN scans sends back a RST TCP packet after receiving a SYN/ACK from the server (this prevents the server from repeatedly trying to make the request). In other words, the sequence for scanning an **open** port looks like this:![[vUQL9SK.png|right|200]]
+
+![](https://assets.tryhackme.com/additional/imgur/bcgeZmI.png)
+
+This has a variety of advantages for us as hackers:
+
+- It can be used to bypass older Intrusion Detection systems as they are looking out for a full three way handshake. This is often no longer the case with modern IDS solutions; it is for this reason that SYN scans are still frequently referred to as "stealth" scans.
+- SYN scans are often not logged by applications listening on open ports, as standard practice is to log a connection once it's been fully established. Again, this plays into the idea of SYN scans being stealthy.
+- Without having to bother about completing (and disconnecting from) a three-way handshake for every port, SYN scans are significantly faster than a standard TCP Connect scan.
+
+There are, however, a couple of disadvantages to SYN scans, namely:
+
+- They require sudo permissions[1] in order to work correctly in Linux. This is because SYN scans require the ability to create raw packets (as opposed to the full TCP handshake), which is a privilege only the root user has by default.
+- Unstable services are sometimes brought down by SYN scans, which could prove problematic if a client has provided a production environment for the test.
+
+All in all, the pros outweigh the cons.
+
+For this reason, SYN scans are the default scans used by Nmap _if run with sudo permissions_. If run **without** sudo permissions, Nmap defaults to the TCP Connect scan we saw in the previous task.
+
+---
+
+When using a SYN scan to identify closed and filtered ports, the exact same rules as with a TCP Connect scan apply.
+
+If a port is closed then the server responds with a RST TCP packet. If the port is filtered by a firewall then the TCP SYN packet is either dropped, or spoofed with a TCP reset.
+
+In this regard, the two scans are identical: the big difference is in how they handle _open_ ports.
+
+---
+
+[1] SYN scans can also be made to work by giving Nmap the CAP_NET_RAW, CAP_NET_ADMIN and CAP_NET_BIND_SERVICE capabilities; however, this may not allow many of the NSE scripts to run properly.
+
+#### Questions
+> [!question]- There are two other names for a SYN scan, what are they?
+> 	Half-Open, Stealth
+
+> [!question]- Can Nmap use a SYN scan without Sudo permissions (Y/N)?
+> N
+
+### Task  7 - <font color="cyan">Scan Type</font> - UPD Scans
+Unlike TCP, UDP connections are _stateless_. This means that, rather than initiating a connection with a back-and-forth "handshake", UDP connections rely on sending packets to a target port and essentially hoping that they make it. This makes UDP superb for connections which rely on speed over quality (e.g. video sharing), but the lack of acknowledgement makes UDP significantly more difficult (and much slower) to scan. The switch for an Nmap UDP scan is (`-sU`)  
+
+When a packet is sent to an open UDP port, there should be no response. When this happens, Nmap refers to the port as being `open|filtered`. In other words, it suspects that the port is open, but it could be firewalled. If it gets a UDP response (which is very unusual), then the port is marked as _open_. More commonly there is no response, in which case the request is sent a second time as a double-check. If there is still no response then the port is marked _open|filtered_ and Nmap moves on.  
+
+When a packet is sent to a _closed_ UDP port, the target should respond with an ICMP (ping) packet containing a message that the port is unreachable. This clearly identifies closed ports, which Nmap marks as such and moves on.  
+
+---
+Due to this difficulty in identifying whether a UDP port is actually open, UDP scans tend to be incredibly slow in comparison to the various TCP scans (in the region of 20 minutes to scan the first 1000 ports, with a good connection). For this reason it's usually good practice to run an Nmap scan with `--top-ports <number>` enabled. For example, scanning with  `nmap -sU --top-ports 20 <target>`. Will scan the top 20 most commonly used UDP ports, resulting in a much more acceptable scan time.
+
+---
+When scanning UDP ports, Nmap usually sends completely empty requests -- just raw UDP packets. That said, for ports which are usually occupied by well-known services, it will instead send a protocol-specific payload which is more likely to elicit a response from which a more accurate result can be drawn.
+
+#### Questions
+> [!question]- If a UDP port doesn't respond to an Nmap scan, what will it be marked as? 
+> open|filtered
+
+> [!question]- When a UDP port is closed, by convention the target should send back a "port unreachable" message. Which protocol would it use to do so?
+> ICMP
+
+### Task  8 - <font color="cyan">Scan Type</font> - NULL, FIN and Xmas
+ULL, FIN and Xmas TCP port scans are less commonly used than any of the others we've covered already, so we will not go into a huge amount of depth here. All three are interlinked and are used primarily as they tend to be even stealthier, relatively speaking, than a SYN "stealth" scan. Beginning with NULL scans:
+
+- As the name suggests, NULL scans (`-sN`) are when the TCP request is sent with no flags set at all. As per the RFC, the target host should respond with a RST if the port is closed.  
+![](https://assets.tryhackme.com/additional/imgur/ABCxAwf.png)
+
+- FIN scans (`-sF`) work in an almost identical fashion; however, instead of sending a completely empty packet, a request is sent with the FIN flag (usually used to gracefully close an active connection). Once again, Nmap expects a RST if the port is closed.  
+![](https://assets.tryhackme.com/additional/imgur/gIzKbEk.png)
+
+- As with the other two scans in this class, Xmas scans (`-sX`) send a malformed TCP packet and expects a RST response for closed ports. It's referred to as an xmas scan as the flags that it sets (PSH, URG and FIN) give it the appearance of a blinking christmas tree when viewed as a packet capture in Wireshark.  
+    ![](https://assets.tryhackme.com/additional/imgur/gKVkGug.png)
+
+The expected response for _open_ ports with these scans is also identical, and is very similar to that of a UDP scan. If the port is open then there is no response to the malformed packet. Unfortunately (as with open UDP ports), that is _also_ an expected behaviour if the port is protected by a firewall, so NULL, FIN and Xmas scans will only ever identify ports as being _open|filtered_, _closed_, or _filtered_. If a port is identified as filtered with one of these scans then it is usually because the target has responded with an ICMP unreachable packet.  
+
+It's also worth noting that while RFC 793 mandates that network hosts respond to malformed packets with a RST TCP packet for closed ports, and don't respond at all for open ports; this is not always the case in practice. In particular Microsoft Windows (and a lot of Cisco network devices) are known to respond with a RST to any malformed TCP packet -- regardless of whether the port is actually open or not. This results in all ports showing up as being closed.  
+
+That said, the goal here is, of course, firewall evasion. Many firewalls are configured to drop incoming TCP packets to blocked ports which have the SYN flag set (thus blocking new connection initiation requests). By sending requests which do not contain the SYN flag, we effectively bypass this kind of firewall. Whilst this is good in theory, most modern IDS solutions are savvy to these scan types, so don't rely on them to be 100% effective when dealing with modern systems.
+
+#### Questions
+> [!question]- Which of the three shown scan types uses the URG flag?
+> Xmas
+
+> [!question]- Why are NULL, FIN and Xmas scans generally used?
+> firewall evasion
+
+>[!question]-  Which common OS may respond to a NULL, FIN or Xmas scan with a RST for every port?
+> Microsoft Windows
+
+### Task  9 - <font color="cyan">Scan Type</font> - ICMP Network Scanning
+
+On first connection to a target network in a black box assignment, our first objective is to obtain a "map" of the network structure -- or, in other words, we want to see which IP addresses contain active hosts, and which do not.
+
+One way to do this is by using Nmap to perform a so called "ping sweep". This is exactly as the name suggests: Nmap sends an ICMP packet to each possible IP address for the specified network. When it receives a response, it marks the IP address that responded as being alive. For reasons we'll see in a later task, this is not always accurate; however, it can provide something of a baseline and thus is worth covering.
+
+To perform a ping sweep, we use the `-sn` switch in conjunction with IP ranges which can be specified with either a hypen (`-`) or CIDR notation. i.e. we could scan the `192.168.0.x` network using:
+
+- `nmap -sn 192.168.0.1-254`
+or
+- `nmap -sn 192.168.0.0/24`
+
+The `-sn` switch tells Nmap not to scan any ports -- forcing it to rely primarily on ICMP echo packets (or ARP requests on a local network, if run with sudo or directly as the root user) to identify targets. In addition to the ICMP echo requests, the `-sn` switch will also cause nmap to send a TCP SYN packet to port 443 of the target, as well as a TCP ACK (or TCP SYN if not run as root) packet to port 80 of the target.
+
+#### Questions
+> [!question]- How would you perform a ping sweep on the 172.16.x.x network (Netmask: 255.255.0.0) using Nmap? (CIDR notation)
+> `nmap -sn 172.16.0.0/16`
 
 
+### Task  10 - <font color="4d4843">NSE Scripts</font> - Overview
+The **N**map **S**cripting **E**ngine (NSE) is an incredibly powerful addition to Nmap, extending its functionality quite considerably. NSE Scripts are written in the _Lua_ programming language, and can be used to do a variety of things: from scanning for vulnerabilities, to automating exploits for them. The NSE is particularly useful for reconnaisance, however, it is well worth bearing in mind how extensive the script library is.
 
+There are many categories available. Some useful categories include:
+
+- `safe`:- Won't affect the target
+- `intrusive`:- Not safe: likely to affect the target  
+    
+- `vuln`:- Scan for vulnerabilities
+- `exploit`:- Attempt to exploit a vulnerability
+- `auth`:- Attempt to bypass authentication for running services (e.g. Log into an FTP server anonymously)
+- `brute`:- Attempt to bruteforce credentials for running services
+- `discovery`:- Attempt to query running services for further information about the network (e.g. query an SNMP server).
+
+A more exhaustive list can be found [NSE List](https://nmap.org/book/nse-usage.html).
+
+In the next task we'll look at how to interact with the NSE and make use of the scripts in these categories.
+
+#### Questions
+> [!question]- What language are NSE scripts written in?
+> Lua
+
+> [!question]- Which category of scripts would be a _very_ bad idea to run in a production environment?
+> intrusive
+
+### Task  11 - <font color="4d4843">NSE Scripts</font> - Working with the NSE
+
+In Task 3 we looked very briefly at the `--script` switch for activating NSE scripts from the `vuln` category using `--script=vuln`. It should come as no surprise that the other categories work in exactly the same way. If the command `--script=safe` is run, then any applicable safe scripts will be run against the target (Note: only scripts which target an active service will be activated).
+
+---
+
+To run a specific script, we would use `--script=<script-name>` , e.g. `--script=http-fileupload-exploiter`.
+
+Multiple scripts can be run simultaneously in this fashion by separating them by a comma. For example: `--script=smb-enum-users,smb-enum-shares`.
+
+Some scripts require arguments (for example, credentials, if they're exploiting an authenticated vulnerability). These can be given with the `--script-args` Nmap switch. An example of this would be with the `http-put` script (used to upload files using the PUT method). This takes two arguments: the URL to upload the file to, and the file's location on disk.  For example:
+
+`nmap -p 80 --script http-put --script-args http-put.url='/dav/shell.php',http-put.file='./shell.php'`
+
+Note that the arguments are separated by commas, and connected to the corresponding script with periods (i.e.  `<script-name>.<argument>`).
+
+A full list of scripts and their corresponding arguments (along with example use cases) can be found [NSEDoc](https://nmap.org/nsedoc/).
+
+---
+
+Nmap scripts come with built-in help menus, which can be accessed using `nmap --script-help <script-name>`. This tends not to be as extensive as in the link given above, however, it can still be useful when working locally.
+
+#### Questions
+> [!question]- What optional argument can the `ftp-anon.nse` script take?
+> maxlist
+
+### Task  12 - <font color="4d4843">NSE Scripts</font> - Searching for Scripts
+Ok, so we know how to use the scripts in Nmap, but we don't yet know how to _find_ these scripts.
+
+We have two options for this, which should ideally be used in conjunction with each other. The first is the page on the [Nmap website](https://nmap.org/nsedoc/) (mentioned in the previous task) which contains a list of all official scripts. The second is the local storage on your attacking machine. Nmap stores its scripts on Linux at `/usr/share/nmap/scripts`. All of the NSE scripts are stored in this directory by default -- this is where Nmap looks for scripts when you specify them.
+
+There are two ways to search for installed scripts. One is by using the `/usr/share/nmap/scripts/script.db` file. Despite the extension, this isn't actually a database so much as a formatted text file containing filenames and categories for each available script.
+
+![](https://assets.tryhackme.com/additional/imgur/aJdVSAP.png)  
+
+Nmap uses this file to keep track of (and utilise) scripts for the scripting engine; however, we can also _grep_ through it to look for scripts. For example: `grep "ftp" /usr/share/nmap/scripts/script.db`.  
+
+![](https://assets.tryhackme.com/additional/imgur/ijAhZsy.png)
+
+The second way to search for scripts is quite simply to use the `ls` command. For example, we could get the same results as in the previous screenshot by using `ls -l /usr/share/nmap/scripts/*ftp*`:
+
+![](https://assets.tryhackme.com/additional/imgur/7GV9Wzi.png)  
+
+_Note the use of asterisks_ (`*`) _on either side of the search term_
+
+The same techniques can also be used to search for categories of script. For example:  
+`grep "safe" /usr/share/nmap/scripts/script.db`  
+
+![](https://assets.tryhackme.com/additional/imgur/352GgTj.png)  
+
+---
+
+Installing New Scripts
+
+We mentioned previously that the Nmap website contains a list of scripts, so, what happens if one of these is missing in the `scripts` directory locally? A standard `sudo apt update && sudo apt install nmap` should fix this; however, it's also possible to install the scripts manually by downloading the script from Nmap (`sudo wget -O /usr/share/nmap/scripts/<script-name>.nse https://svn.nmap.org/nmap/scripts/<script-name>.nse`). This must then be followed up with `nmap --script-updatedb`, which updates the `script.db` file to contain the newly downloaded script.
+
+It's worth noting that you would require the same "updatedb" command if you were to make your own NSE script and add it into Nmap -- a more than manageable task with some basic knowledge of Lua!
+
+ #### Questions
+> [!question]- Search for "smb" scripts in the `/usr/share/nmap/scripts/` directory using either of the demonstrated methods.  What is the filename of the script which determines the underlying OS of the SMB server?
+> `smb-os-discovery.nse`
+
+> [!question]- Read through this script. What does it depend on?
+> smb-brute
+
+### Task 13 - Firewall Invasion
+We have already seen some techniques for bypassing firewalls (think stealth scans, along with NULL, FIN and Xmas scans); however, there is another very common firewall configuration which it's imperative we know how to bypass.
+
+Your typical Windows host will, with its default firewall, block all ICMP packets. This presents a problem: not only do we often use _ping_ to manually establish the activity of a target, Nmap does the same thing by default. This means that Nmap will register a host with this firewall configuration as dead and not bother scanning it at all.
+
+So, we need a way to get around this configuration. Fortunately Nmap provides an option for this: `-Pn`, which tells Nmap to not bother pinging the host before scanning it. This means that Nmap will always treat the target host(s) as being alive, effectively bypassing the ICMP block; however, it comes at the price of potentially taking a very long time to complete the scan (if the host really is dead then Nmap will still be checking and double checking every specified port).
+
+It's worth noting that if you're already directly on the local network, Nmap can also use ARP requests to determine host activity.
+
+---
+
+There are a variety of other switches which Nmap considers useful for firewall evasion. We will not go through these in detail, however, they can be found [here(opens in new tab)](https://nmap.org/book/man-bypass-firewalls-ids.html).
+
+The following switches are of particular note:
+
+- `-f`:- Used to fragment the packets (i.e. split them into smaller pieces) making it less likely that the packets will be detected by a firewall or IDS.
+- An alternative to `-f`, but providing more control over the size of the packets: `--mtu <number>`, accepts a maximum transmission unit size to use for the packets sent. This _must_ be a multiple of 8.
+- `--scan-delay <time>ms`:- used to add a delay between packets sent. This is very useful if the network is unstable, but also for evading any time-based firewall/IDS triggers which may be in place.
+- `--badsum`:- this is used to generate in invalid checksum for packets. Any real TCP/IP stack would drop this packet, however, firewalls may potentially respond automatically, without bothering to check the checksum of the packet. As such, this switch can be used to determine the presence of a firewall/IDS.
+
+#### Questions
+> [!question]-  Which simple (and frequently relied upon) protocol is often blocked, requiring the use of the `-Pn` switch?
+> IMCP
+
+> [!question]- **[Research]** Which Nmap switch allows you to append an arbitrary length of random data to the end of packets?
+> --data-length
+
+### Task 14 - <font color="a3ea2a">Practical</font>
+
+Use what you've learnt to scan the target machine and answer the following questions!
+
+#### Questions
+> [!question]- Does the target ip respond to ICMP echo (ping) requests (Y/N)?
+>  N
+> ![[Screenshot 2026-05-06 205455.png]]
+
+> [!question]- Perform an Xmas scan on the first 999 ports of the target -- how many ports are shown to be open or filtered?
+> 999
+> ![[Screenshot 2026-05-06 205623.png]]
+
+> [!question]- There is a reason given for this -- what is it? **Note:** The answer will be in your scan results. Think carefully about which switches to use -- and read the hint before asking for help!
+> No Responses
+> ![[Screenshot 2026-05-06 205741.png]] 
+
+> [!question]- Perform a TCP SYN scan on the first 5000 ports of the target -- how many ports are shown to be open?
+> 5
+> ![[Screenshot 2026-05-06 205912.png]]
+
+
+> [!question]- Open Wireshark (see [Cryillic's](https://tryhackme.com/p/Cryillic) [Wireshark Room](https://tryhackme.com/room/wireshark) for instructions) and perform a TCP Connect scan against port 80 on the target, monitoring the results. Make sure you understand what's going on. Deploy the `ftp-anon` script against the box. Can Nmap login successfully to the FTP server on port 21? (Y/N)
+>N
+>![[Screenshot 2026-05-06 210003.png]]
+
+
+### Task 15 - Conclusion
+You have now completed the Further Nmap room -- hopefully you enjoyed it, and learnt something new!
+
+There are lots of great resources for learning more about Nmap on your own. Front and center are Nmaps own (highly extensive) [NmapBook](https://nmap.org/book/) which have already been mentioned several times throughout the room. These are a superb resource, so, whilst reading through them line-by-line and learning them by rote is entirely unnecessary, it would be highly advisable to use them as a point of reference, should you need it.
+
+> [!info]+ 
+> This section does not have any questions as this is just a information section  and the end of the room,:)
+
+
+<!--
+## Templates
+> [!question]- 
+
+> [!question]- 
+> 
+<!-- #### Questions
+> [!question]- 
+
+> [!question]- 
+--->

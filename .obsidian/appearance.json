@@ -9,11 +9,11 @@
   "interfaceFontFamily": "Exo 2",
   "enabledCssSnippets": [
     "S - Callouts",
-    "S - Checkboxes",
     "S - Dataview Cards",
     "S - Embed Adjustments",
     "S - Encoded Fonts",
     "S - Encoded Icons",
-    "S - External Link Icons"
+    "S - External Link Icons",
+    "S - Checkboxes"
   ]
 }
