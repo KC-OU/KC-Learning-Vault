@@ -46,8 +46,6 @@ A roadmap to industry-recognized certifications, detailing cost, exam structure,
 
 ## 🖼️ Gallery
 
-*Add screenshots here to showcase the WOTC-Beyond aesthetic!*
-
 ![](z_Assets/Images/main/main-image-readme.png)
 
 <p align="center">
