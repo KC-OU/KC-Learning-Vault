@@ -48,7 +48,7 @@ A roadmap to industry-recognized certifications, detailing cost, exam structure,
 
 *Add screenshots here to showcase the WOTC-Beyond aesthetic!*
 
-![](z_Assets/Images/main/IT%20Learning.png)
+![](z_Assets/Images/main/main-image-readme.png)
 
 <p align="center">
   <i>Main Vault Menu - Styled with WOTC-Beyond Theme</i>
