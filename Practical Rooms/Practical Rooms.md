@@ -14,11 +14,23 @@ Practical rooms in TryHackMe and HackTheBox are interactive, browser-based, or V
 
 ### TryHackMe
 
+#### Learning
+
 | What is the Practical Room Called? | Type of Room | Difficulty  of the Room | Completed                          | Link to Room                                   |
 | ---------------------------------- | ------------ | ----------------------- | ---------------------------------- | ---------------------------------------------- |
-| [[Wreath - TryhackMe - Network]]   | Network      | Easy                    | <input type="checkbox" unchecked/> | [Wreath](https://tryhackme.com/room/wreath)    |
 | [[Nmap - TryhackMe - Walkthrough]] | Walkthrough  | Easy                    | <input type="checkbox" checked/>   | [Nmap](https://tryhackme.com/room/furthernmap) |
-|                                    |              |                         |                                    |                                                |
+|                                    |              |                         |                                    | 
+
+
+
+
+##### Networks
+
+
+
+
+#### Challenges
+
 
 
 ### Hack The Box
@@ -31,4 +43,3 @@ Practical rooms in TryHackMe and HackTheBox are interactive, browser-based, or V
 
 | What is the Practical Room Called? | Type of Room | Difficulty  of the Room |
 | ---------------------------------- | ------------ | ----------------------- |
-|                                    |              |                         |

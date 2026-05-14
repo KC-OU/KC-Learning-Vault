@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Practical Rooms/TryHackMe/Wreath - TryhackMe - Network.md",
+                "file": "Practical Rooms/Practical Rooms.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Wreath - TryhackMe - Network"
+              "title": "Practical Rooms"
             }
           }
         ]
@@ -161,8 +161,21 @@
               "icon": "lucide-list",
               "title": "Outline"
             }
+          },
+          {
+            "id": "980d30fe2f7464cd",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {
+                "file": "Practical Rooms/Practical Rooms.md"
+              },
+              "icon": "lucide-info",
+              "title": "File properties for Practical Rooms"
+            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -181,15 +194,18 @@
       "bases:Create new base": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "obsidian-excalidraw-plugin:New drawing": false,
-      "homepage:Open homepage": false
+      "homepage:Open homepage": false,
+      "publish:Publish changes...": false
     }
   },
   "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
-    "Practical Rooms/Practical Rooms.md",
-    "Main Vault Menu.md",
     "Practical Rooms/TryHackMe/Wreath - TryhackMe - Network.md",
+    "publish.js~",
+    "publish.js",
+    "Practical Rooms/Practical Rooms.md",
     "Practical Rooms/TryHackMe/Nmap - TryhackMe - Walkthrough.md",
+    "Main Vault Menu.md",
     "Pasted image 20260506215246.png",
     "![](.md",
     "Pasted image 20260506214915.png",
@@ -217,8 +233,6 @@
     "Practical Rooms/TryHackMe",
     "Practical Rooms",
     "Beginner Certs/Cisco/Splunk Core/Splunk Core.md",
-    "Beginner Certs/Other/TryHackMe/THM-PT1/Practice Rooms",
-    "Beginner Certs/Other/TryHackMe/THM-PT1",
     "z_Assets/Images/Untitled.md",
     "Beginner Certs/Other/HacktheBox/HTB-CJCA.md",
     "Excalidraw/Drawing 2026-04-21 23.29.18.excalidraw.md",
