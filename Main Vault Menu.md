@@ -11,7 +11,7 @@
 > | IT Support | 100-140 | 1 | £92 |
 > | Networking | 100-150 | 1 | £92 |
 > | Cyber  Sec  | 100-160 | 1 | £92|
-> | [[Splunk Core]] | N/A | 1 | £96|
+> | Splunk Core | N/A | 1 | £96|
 > | Splunk PUser | N/A | 1 | £96|
 > ---
 > ## **CompTIA - Entry-level**
@@ -40,7 +40,7 @@
 > | ------ | -------- |--------------------|------ |
 > | CCNA | 200-301  | 1 | £222 |
 > | CCNA Cyber | 200-201 | 1 | £222 |
-> |E Hacking | N/A | 1| FREE | 
+> | [[Ethical Hacker]] | N/A | 1| FREE | 
 > ---
 > ## **CompTIA**
 > | Name | Exam Code | HOE | Cost |

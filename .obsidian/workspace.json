@@ -13,12 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Main Vault Menu.md",
+                "file": "Advanced Certs/Cisco/Ethical Hacker/Ethical Hacker.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Main Vault Menu"
+              "title": "Ethical Hacker"
+            }
+          },
+          {
+            "id": "07626ac1078f0185",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Practical Rooms/TryHackMe/Nmap - TryhackMe - Walkthrough.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Nmap - TryhackMe - Walkthrough"
             }
           }
         ]
@@ -184,6 +198,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "homepage:Open homepage": false,
       "obsidian-kanban:Create new board": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
@@ -194,19 +209,28 @@
       "bases:Create new base": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "obsidian-excalidraw-plugin:New drawing": false,
-      "homepage:Open homepage": false,
       "publish:Publish changes...": false
     }
   },
-  "active": "d0ae0591f9fda313",
+  "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
+    "Practical Rooms/TryHackMe/Nmap - TryhackMe - Walkthrough.md",
+    "Advanced Certs/Cisco/Ethical Hacker/Ethical Hacker.md",
     "Practical Rooms/Practical Rooms.md",
     "README.md",
+    "Main Vault Menu.md",
+    "z_Assets/Templates/thm-template.md",
+    "Beginner Certs/Other/TryHackMe/THM-PT1/THM-PT1.md",
+    "style_reference.png",
+    "Advanced Certs/Cisco/Ethical Hacker",
+    "Advanced Certs/Cisco",
+    "Untitled Kanban.md",
+    "z_Assets/Templates",
+    "Beginner Certs/Cisco/Splunk Core/Splunk Core.md",
+    "z_Assets/Images/main/main-image-readme.png",
     "Practical Rooms/TryHackMe/Wreath - TryhackMe - Network.md",
     "publish.js~",
     "publish.js",
-    "Practical Rooms/TryHackMe/Nmap - TryhackMe - Walkthrough.md",
-    "Main Vault Menu.md",
     "Pasted image 20260506215246.png",
     "![](.md",
     "Pasted image 20260506214915.png",
@@ -218,10 +242,6 @@
     "z_Assets/Images/practical/thm/nmap/Screenshot 2026-05-06 205455.png",
     "KC-Learning Kanban.md",
     "Untitled Kanban 1.md",
-    "Untitled Kanban.md",
-    "z_Assets/Images/practical/thm/nmap/cPzF0kU.png",
-    "z_Assets/Images/practical/thm/nmap/vUQL9SK.png",
-    "Beginner Certs/Other/TryHackMe/THM-PT1/THM-PT1.md",
     "z_Assets/Images/practical/thm/nmap",
     "z_Assets/Images/practical/thm",
     "z_Assets/Images/practical/Untitled.md",
@@ -230,10 +250,6 @@
     "z_Assets/Untitled.md",
     "z_Templates",
     "Practical Rooms/Other",
-    "Practical Rooms/HacktheBox",
-    "Practical Rooms/TryHackMe",
-    "Practical Rooms",
-    "Beginner Certs/Cisco/Splunk Core/Splunk Core.md",
     "z_Assets/Images/Untitled.md",
     "Beginner Certs/Other/HacktheBox/HTB-CJCA.md",
     "Excalidraw/Drawing 2026-04-21 23.29.18.excalidraw.md",

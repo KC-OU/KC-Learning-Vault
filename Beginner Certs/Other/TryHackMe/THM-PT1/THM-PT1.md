@@ -67,7 +67,7 @@ Ultimately, the Junior Penetration Tester pathway is the perfect launchpad. It p
 
 This course is related to the THM-SEC0 and THM-SEC01 Professional Certification and to the PT1 Certification. 
 
-> [!column|list 2 ] Categories
+> [!column|list 2]+ Categories
 > - [**Introduction to Cyber Security**](##Introduction%20to%20Cyber%20Security)
 >     - [Offensive Security Intro](###Offensive%20Security%20Intro)
 >     - Defensive Security Intro

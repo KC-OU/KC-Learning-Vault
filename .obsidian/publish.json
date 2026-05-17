@@ -2,5 +2,12 @@
   "siteId": "4cbd32f6b9a2ae458b214fd3485a68ac",
   "host": "publish-01.obsidian.md",
   "included": [],
-  "excluded": []
+  "excluded": [
+    "Excalidraw",
+    "z_Templates",
+    "z_Test_Folder",
+    "Beginner Certs/Cisco/Splunk Core",
+    "z_Assets/Templates",
+    "Beginner Certs/Other/HacktheBox"
+  ]
 }

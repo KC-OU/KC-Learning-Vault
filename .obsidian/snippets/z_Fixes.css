@@ -1,0 +1,46 @@
+/* Fix speed of selection and columns */
+
+/* Smoother transitions for nav/outline items */
+.nav-file-title,
+.nav-folder-title,
+.tree-item-self,
+.suggestion-item {
+    transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out, transform 0.3s ease-in-out !important;
+}
+
+/* Smoother transitions for column callouts */
+.callout[data-callout*="column"] {
+    transition: all 0.6s ease-in-out !important;
+}
+
+.callout[data-callout*="column"] .callout-content {
+    transition: grid-template-columns 0.6s ease-in-out, gap 0.6s ease-in-out !important;
+}
+
+/* Fix "too quick" cubic-bezier from Folder Styles snippet if active */
+.file-explorer-flat .mod-root .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-title > .nav-folder-title-content {
+    transition: all 0.6s ease-in-out !important;
+}
+
+/* Remove page preview when selecting subheadings in the nav (Outline) */
+/* This prevents the hover preview from triggering on the item container while allowing clicks on the text/icon */
+.outline .tree-item-self {
+    pointer-events: none !important;
+}
+
+.outline .tree-item-self .tree-item-inner,
+.outline .tree-item-self .collapse-icon,
+.outline .tree-item-self .tree-item-icon {
+    pointer-events: auto !important;
+}
+
+/* Ensure smooth scrolling when selecting subheadings */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Make hover popovers fade in slower */
+.popover.hover-popover {
+    transition: opacity 0.4s ease-in-out !important;
+}
+
