@@ -20,20 +20,6 @@
               "icon": "lucide-file",
               "title": "Ethical Hacker"
             }
-          },
-          {
-            "id": "07626ac1078f0185",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Practical Rooms/TryHackMe/Nmap - TryhackMe - Walkthrough.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Nmap - TryhackMe - Walkthrough"
-            }
           }
         ]
       }
@@ -214,11 +200,11 @@
   },
   "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
-    "Practical Rooms/TryHackMe/Nmap - TryhackMe - Walkthrough.md",
+    "Main Vault Menu.md",
     "Advanced Certs/Cisco/Ethical Hacker/Ethical Hacker.md",
+    "Practical Rooms/TryHackMe/Nmap - TryhackMe - Walkthrough.md",
     "Practical Rooms/Practical Rooms.md",
     "README.md",
-    "Main Vault Menu.md",
     "z_Assets/Templates/thm-template.md",
     "Beginner Certs/Other/TryHackMe/THM-PT1/THM-PT1.md",
     "style_reference.png",

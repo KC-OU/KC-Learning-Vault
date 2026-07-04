@@ -1,4 +1,4 @@
-## Course Categories
+`## Course Categories
 
 This course is related to the Cisco Ethical Hacking Course  on [Cisco-Netcad](https://www.netacad.com/launch?id=80c156bc-84a4-47c9-a233-5eafe7bdde82&tab=curriculum&view=a2f2eff1-791f-5595-8680-4a3b27778d2e)
 
@@ -37,8 +37,10 @@ This course is related to the Cisco Ethical Hacking Course  on [Cisco-Netcad](ht
 >		  - [**1.4.2 Reflection Questions**](##1.4.2%20Reflection%20Questions)
 >		  - [**1.4.3 Quiz - Introduction to Ethical Hacking and Penetration Testing**](##1.4.3%20Quiz%20-%20Introduction%20to%20Ethical%20Hacking%20and%20Penetration%20Testing)
 > - [**Module 2: Planning and Scoping a Penetration Testing Assessment**](##Module%202%20Planning%20and%20Scoping%20%20%20a%20Penetration%20Testing%20Assessment)
-
-
+>	  - [**2.0 Introduction**](##2.0%20Introduction)	  
+>         - [**2.0.1 Why should I Take This Module?**](##2.0.1%20Why%20Should%20I%20Take%20This%20Module?)
+>		  - [**2.0.2 What Will I Learn in This Module**](##2.0.2%20What$20Will%20I%20Learn%20in%20This%20Module)
+>
 
 
 
